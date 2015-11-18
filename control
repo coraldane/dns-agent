@@ -67,7 +67,6 @@ function tailf() {
 
 function build() {
     go build -o $app main.go
-    go build command.go
     if [ $? -ne 0 ]; then
         exit $?
     fi
