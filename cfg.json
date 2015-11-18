@@ -1,0 +1,32 @@
+{
+  "Interval": 10,
+  "LoginEmail": "coraldane@163.com",
+  "LoginPassword": "adwr475236",
+  "Domains": [
+    {
+      "DomainId": 1869122,
+      "Records": [
+        {
+          "RecordId": 121435689,
+          "SubDomain": "@"
+        },
+        {
+          "RecordId": 121435690,
+          "SubDomain": "www"
+        },
+        {
+          "RecordId": 121435699,
+          "SubDomain": "ops"
+        },
+        {
+          "RecordId": 127272956,
+          "SubDomain": "jenkins"
+        },
+        {
+          "RecordId": 128309404,
+          "SubDomain": "etcd"
+        }
+      ]
+    }
+  ]
+}

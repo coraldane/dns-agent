@@ -1,0 +1,1 @@
+git add --all && git commit -m 'init' && git push origin master
