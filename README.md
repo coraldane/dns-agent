@@ -2,23 +2,26 @@
 Agent for updating IP record into DnsPod.cn
 
 Golang写的用于定时更新DnsPod中的IP记录的定时更新器
-现在设定为每10秒更新一次。
+现在设定为每60秒更新一次。
 
 参数配置请修改config.json文件
 
 config.json
 ```json
 {
-"Interval": 10,
-"LoginEmail": "***@163.com", //登陆DNSPOD用到的邮箱名
-"LoginPassword": "****",     //登陆DNSPOD的密码
-"Domains": [
-	{"DomainId": 17039700,   //域名ID，可以在域名管理界面，域名前面的checkbox中的value
-	"Records": [
-		{"RecordId": 70808122, "SubDomain": "@"}, //域名记录, RecordId同样也可以在配置IP的界面，前面复选框中获得
-		{"RecordId": 70808125, "SubDomain": "www"}
-		]
-	}
+  "debug": true,
+  "interval": 60,
+  "login_email": "***@163.com",//登陆DNSPOD用到的邮箱名
+  "login_pwd": "******",  //登陆DNSPOD的密码
+  "domains": [
+    {
+      "domain_name": "12345.com",  //域名名称,该域名的解析DNS要首先转入到DnsPod
+      "record_names": ["@", "www", "jenkins", "kubeapi", "etcd", "ops"] //子域名的前缀
+    },
+    {
+      "domain_name": "yuming.org",
+      "record_names": ["@", "www"]
+    }
   ]
 }
 ```
