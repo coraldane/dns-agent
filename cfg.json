@@ -1,32 +1,16 @@
 {
-  "Interval": 10,
-  "LoginEmail": "coraldane@163.com",
-  "LoginPassword": "adwr475236",
-  "Domains": [
+  "debug": true,
+  "interval": 30,
+  "login_email": "coraldane@163.com",
+  "login_pwd": "adwr475236",
+  "domains": [
     {
-      "DomainId": 1869122,
-      "Records": [
-        {
-          "RecordId": 121435689,
-          "SubDomain": "@"
-        },
-        {
-          "RecordId": 121435690,
-          "SubDomain": "www"
-        },
-        {
-          "RecordId": 121435699,
-          "SubDomain": "ops"
-        },
-        {
-          "RecordId": 127272956,
-          "SubDomain": "jenkins"
-        },
-        {
-          "RecordId": 128309404,
-          "SubDomain": "etcd"
-        }
-      ]
+      "domain_name": "idao.me",
+      "record_names": ["@", "www", "jenkins", "kubeapi", "etcd", "ops"]
+    },
+    {
+      "domain_name": "mixuan.org",
+      "record_names": ["@", "www"]
     }
   ]
 }

@@ -9,20 +9,16 @@ import (
 )
 
 type GlobalConfig struct {
-	Interval      int
-	LoginEmail    string
-	LoginPassword string
-	Domains       []Domain
+	Debug         bool           `json:"debug"`
+	Interval      int            `json:"interval"`
+	LoginEmail    string         `json:"login_email"`
+	LoginPassword string         `json:"login_pwd"`
+	Domains       []DomainConfig `json:"domains"`
 }
 
-type Record struct {
-	RecordId  int
-	SubDomain string
-}
-
-type Domain struct {
-	DomainId int
-	Records  []Record
+type DomainConfig struct {
+	DomainName  string   `json:"domain_name"`
+	RecordNames []string `json:"record_names"`
 }
 
 var (

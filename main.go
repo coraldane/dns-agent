@@ -7,7 +7,7 @@ import (
 	"github.com/coraldane/dns-agent/g"
 	"log"
 	"os"
-	"time"
+	// "time"
 )
 
 func main() {
@@ -24,13 +24,16 @@ func main() {
 	g.ParseConfig(*cfg)
 	log.Println(g.Config())
 
-	ticker1 := time.NewTicker(time.Duration(g.Config().Interval) * time.Second)
-	for {
-		select {
-		case <-ticker1.C:
-			go func() {
-				cron.UpdateIpRecord()
-			}()
-		}
-	}
+	go cron.Heartbeat()
+
+	select {}
+	// ticker1 := time.NewTicker(time.Duration(g.Config().Interval) * time.Second)
+	// for {
+	// 	select {
+	// 	case <-ticker1.C:
+	// 		go func() {
+	// 			cron.UpdateIpRecord()
+	// 		}()
+	// 	}
+	// }
 }
