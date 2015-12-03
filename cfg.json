@@ -1,6 +1,6 @@
 {
   "debug": true,
-  "interval": 30,
+  "interval": 60,
   "login_email": "coraldane@163.com",
   "login_pwd": "adwr475236",
   "domains": [
