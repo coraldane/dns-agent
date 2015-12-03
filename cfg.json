@@ -1,8 +1,8 @@
 {
   "debug": true,
   "interval": 60,
-  "login_email": "coraldane@163.com",
-  "login_pwd": "adwr475236",
+  "login_email": "***@163.com",
+  "login_pwd": "******",
   "domains": [
     {
       "domain_name": "idao.me",
