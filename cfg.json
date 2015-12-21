@@ -10,7 +10,7 @@
     },
     {
       "domain_name": "mixuan.org",
-      "record_names": ["@", "www"]
+      "record_names": ["@", "www", "docker"]
     }
   ]
 }
