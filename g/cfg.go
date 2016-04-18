@@ -14,6 +14,16 @@ type GlobalConfig struct {
 	LoginEmail    string         `json:"login_email"`
 	LoginPassword string         `json:"login_pwd"`
 	Domains       []DomainConfig `json:"domains"`
+	Redis         RedisConfig    `json:"redis"`
+}
+
+type RedisConfig struct {
+	Dsn          string `json:"dsn"`
+	MaxIdle      int    `json:"maxIdle"`
+	ConnTimeout  int    `json:"connTimeout"`
+	ReadTimeout  int    `json:"readTimeout"`
+	WriteTimeout int    `json:"writeTimeout"`
+	Passwd       string `json:"passwd"`
 }
 
 type DomainConfig struct {

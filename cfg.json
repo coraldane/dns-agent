@@ -1,16 +1,20 @@
 {
   "debug": true,
   "interval": 60,
-  "login_email": "***@163.com",
-  "login_pwd": "******",
+  "login_email": "coraldane@163.com",
+  "login_pwd": "adwr475236",
   "domains": [
     {
-      "domain_name": "idao.me",
-      "record_names": ["@", "www", "jenkins", "kubeapi", "etcd", "ops"]
-    },
-    {
       "domain_name": "mixuan.org",
-      "record_names": ["@", "www", "docker"]
+      "record_names": ["@"]
     }
-  ]
+  ],
+  "redis": {
+      "dsn": "udai.com:6379",
+      "passwd": "redis@udai",
+      "maxIdle": 5,
+      "connTimeout": 5000,
+      "readTimeout": 5000,
+      "writeTimeout": 5000
+  }
 }
