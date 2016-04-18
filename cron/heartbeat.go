@@ -57,7 +57,6 @@ func heartbeat() {
 	}
 
 	var modifyResult bool
-
 	for _, domain := range g.Config().Domains {
 		if _, ok := domainMap[domain.DomainName]; ok {
 			if recordResults, exists := recordMap[domain.DomainName]; exists {
