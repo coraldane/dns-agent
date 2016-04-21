@@ -25,7 +25,7 @@ config.json
   ],
   "redis": {     //在IP变更的时候用作消息队列
       "enabled": true,
-      "dsn": "udai.com:6379",
+      "dsn": "******",
       "passwd": "******",
       "maxIdle": 5,
       "connTimeout": 5000,
