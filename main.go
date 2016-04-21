@@ -24,7 +24,9 @@ func main() {
 	g.ParseConfig(*cfg)
 	log.Println(g.Config())
 
-	g.InitRedisConnPool()
+	if g.Config().Redis.Enabled {
+		g.InitRedisConnPool()
+	}
 
 	go cron.SyncDomainRecord()
 	go cron.Heartbeat()

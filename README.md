@@ -22,7 +22,16 @@ config.json
       "domain_name": "yuming.org",
       "record_names": ["@", "www"]
     }
-  ]
+  ],
+  "redis": {     //在IP变更的时候用作消息队列
+      "enabled": true,
+      "dsn": "udai.com:6379",
+      "passwd": "******",
+      "maxIdle": 5,
+      "connTimeout": 5000,
+      "readTimeout": 5000,
+      "writeTimeout": 5000
+  }
 }
 ```
 

@@ -73,10 +73,12 @@ func heartbeat() {
 		lastIp = strIp
 		log.Println("last ip have changed into ", strIp)
 
-		// send to redis
-		rc := g.RedisConnPool.Get()
-		defer rc.Close()
-		rc.Do("LPUSH", "COMMAND_udai", "service nginx restart")
+		if g.Config().Redis.Enabled {
+			// send to redis
+			rc := g.RedisConnPool.Get()
+			defer rc.Close()
+			rc.Do("LPUSH", "COMMAND_udai", "service nginx restart")
+		}
 	}
 }
 

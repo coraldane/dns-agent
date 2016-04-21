@@ -18,6 +18,7 @@ type GlobalConfig struct {
 }
 
 type RedisConfig struct {
+	Enabled      bool   `json:"enabled"`
 	Dsn          string `json:"dsn"`
 	MaxIdle      int    `json:"maxIdle"`
 	ConnTimeout  int    `json:"connTimeout"`

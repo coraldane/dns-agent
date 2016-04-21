@@ -2,7 +2,7 @@
   "debug": true,
   "interval": 60,
   "login_email": "coraldane@163.com",
-  "login_pwd": "adwr475236",
+  "login_pwd": "******",
   "domains": [
     {
       "domain_name": "mixuan.org",
@@ -10,8 +10,9 @@
     }
   ],
   "redis": {
+      "enabled": true,
       "dsn": "udai.com:6379",
-      "passwd": "redis@udai",
+      "passwd": "******",
       "maxIdle": 5,
       "connTimeout": 5000,
       "readTimeout": 5000,
