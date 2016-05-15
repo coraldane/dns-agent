@@ -53,6 +53,7 @@ func heartbeat() {
 		return
 	}
 
+	logger.Debugln("domainMap's size:", len(domainMap))
 	if 0 == len(domainMap) {
 		return
 	}
