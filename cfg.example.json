@@ -1,5 +1,5 @@
 {
-  "debug": true,
+  "log_level": "debug",
   "interval": 60,
   "login_email": "coraldane@163.com",
   "login_pwd": "******",

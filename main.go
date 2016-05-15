@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"github.com/coraldane/dns-agent/cron"
 	"github.com/coraldane/dns-agent/g"
+	"github.com/toolkits/logger"
 	"log"
 	"os"
-	// "time"
 )
 
 func main() {
@@ -23,6 +23,8 @@ func main() {
 
 	g.ParseConfig(*cfg)
 	log.Println(g.Config())
+
+	logger.SetLevelWithDefault(g.Config().LogLevel, "info")
 
 	if g.Config().Redis.Enabled {
 		g.InitRedisConnPool()

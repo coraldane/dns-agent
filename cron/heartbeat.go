@@ -2,7 +2,7 @@ package cron
 
 import (
 	"github.com/coraldane/dns-agent/g"
-	"log"
+	"github.com/toolkits/logger"
 	"time"
 )
 
@@ -49,6 +49,7 @@ func syncRecordList() {
 func heartbeat() {
 	strIp := getIp()
 	if "" == strIp || lastIp == strIp {
+		logger.Debug("strIp:%s, lastIp: %s.\n", strIp, lastIp)
 		return
 	}
 
@@ -71,7 +72,7 @@ func heartbeat() {
 
 	if modifyResult {
 		lastIp = strIp
-		log.Println("last ip have changed into ", strIp)
+		logger.Infoln("last ip have changed into ", strIp)
 
 		if g.Config().Redis.Enabled {
 			// send to redis

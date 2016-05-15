@@ -9,7 +9,7 @@ import (
 )
 
 type GlobalConfig struct {
-	Debug         bool           `json:"debug"`
+	LogLevel      string         `json:"log_level"`
 	Interval      int            `json:"interval"`
 	LoginEmail    string         `json:"login_email"`
 	LoginPassword string         `json:"login_pwd"`
