@@ -101,7 +101,7 @@ func GetRecordList(domainId int) []g.RecordResult {
 }
 
 func getIp() string {
-	strUrl := "http://ops.mixuan.org/api/ip"
+	strUrl := g.Config().GetIpApi
 	logger.Debug("REQUEST_URL:%s\n", strUrl)
 	httpRequest := httplib.Get(strUrl).SetTimeout(3*time.Second, 10*time.Second)
 	httpResponse, err := httpRequest.Bytes()
@@ -121,7 +121,7 @@ func getIp() string {
 		strIp = resp.Message
 	}
 
-	logger.Debugln("RESPONSE_IP:", strIp)
+	logger.Infoln("RESPONSE_IP:", strIp)
 	return strIp
 }
 

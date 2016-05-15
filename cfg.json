@@ -2,8 +2,8 @@
   "log_level": "debug",
   "interval": 60,
   "login_email": "coraldane@163.com",
-  "login_pwd": "******",
-  "get_ip_api": "http://udai.com/api/ip",
+  "login_pwd": "adwr475236",
+  "get_ip_api": "http://cm.ops.vobile.org/api/ip",
   "domains": [
     {
       "domain_name": "mixuan.org",
@@ -13,7 +13,7 @@
   "redis": {
       "enabled": true,
       "dsn": "udai.com:6379",
-      "passwd": "******",
+      "passwd": "redis@udai",
       "maxIdle": 5,
       "connTimeout": 5000,
       "readTimeout": 5000,

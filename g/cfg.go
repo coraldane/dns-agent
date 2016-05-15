@@ -13,6 +13,7 @@ type GlobalConfig struct {
 	Interval      int            `json:"interval"`
 	LoginEmail    string         `json:"login_email"`
 	LoginPassword string         `json:"login_pwd"`
+	GetIpApi      string         `json:"get_ip_api"`
 	Domains       []DomainConfig `json:"domains"`
 	Redis         RedisConfig    `json:"redis"`
 }
