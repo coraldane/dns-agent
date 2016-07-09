@@ -79,7 +79,7 @@ func heartbeat() {
 			// send to redis
 			rc := g.RedisConnPool.Get()
 			defer rc.Close()
-			rc.Do("LPUSH", "COMMAND_udai", "service nginx restart")
+			rc.Do("LPUSH", "COMMAND_udai", g.Config().ExecuteCommand)
 		}
 	}
 }

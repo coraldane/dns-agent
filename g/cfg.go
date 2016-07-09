@@ -9,13 +9,14 @@ import (
 )
 
 type GlobalConfig struct {
-	LogLevel      string         `json:"log_level"`
-	Interval      int            `json:"interval"`
-	LoginEmail    string         `json:"login_email"`
-	LoginPassword string         `json:"login_pwd"`
-	GetIpApi      string         `json:"get_ip_api"`
-	Domains       []DomainConfig `json:"domains"`
-	Redis         RedisConfig    `json:"redis"`
+	LogLevel       string         `json:"log_level"`
+	Interval       int            `json:"interval"`
+	LoginEmail     string         `json:"login_email"`
+	LoginPassword  string         `json:"login_pwd"`
+	GetIpApi       string         `json:"get_ip_api"`
+	ExecuteCommand string         `json:"execute_command"`
+	Domains        []DomainConfig `json:"domains"`
+	Redis          RedisConfig    `json:"redis"`
 }
 
 type RedisConfig struct {

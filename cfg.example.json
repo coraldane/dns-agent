@@ -4,6 +4,7 @@
   "login_email": "coraldane@163.com",
   "login_pwd": "******",
   "get_ip_api": "http://udai.com/api/ip",
+  "execute_command": "nginx -s reload",
   "domains": [
     {
       "domain_name": "mixuan.org",
